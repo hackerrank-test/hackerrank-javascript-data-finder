@@ -21,7 +21,18 @@ function readLine() {
 
 
 function dataFinder(data) {
-    // Write your code here
+    var find = function(minRange, maxRange, value) {
+        if (minRange < 0 || maxRange >= data.length) {
+            throw new Error('Invalid range');
+        }
+        for (let i = minRange; i <= maxRange; i++) {
+            if (data[i] === value) {
+                return true;
+            }
+        }
+        return false;
+    }
+    return find;
 }
 
 function main() {
